@@ -23,7 +23,7 @@ const getAllProd = async () => {
     try {
         const axiosResponse = await axios
             .get(`${import.meta.env.VITE_BASE_URL}/products`, {
-                withCredentials: true, // axios send automatically cookies when we apply this property
+                // withCredentials: true, // axios send automatically cookies when we apply this property
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -40,7 +40,7 @@ const deleteProd = async (productId) => {
     try {
         const axiosResponse = await axios
             .delete(`${import.meta.env.VITE_BASE_URL}/products/${productId}`, {
-                withCredentials: true, // axios send automatically cookies when we apply this property
+                // withCredentials: true, // axios send automatically cookies when we apply this property
                 headers: {
                     "Content-Type": "application/json"
                 },
