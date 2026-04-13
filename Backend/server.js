@@ -16,7 +16,10 @@ const app = express();
 //middlewares
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: [
+    "http://localhost:5173", // local dev
+      "https://shopwave-dun.vercel.app"], // production frontend
+     credentials: true }));
 app.use(cookieParser());
 
 // importing routes
