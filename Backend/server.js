@@ -18,7 +18,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors({ origin: [
     "http://localhost:5173", // local dev
-      "https://shopwave-dun.vercel.app",
+    "https://shopwave-dun.vercel.app",
     "https://shopwave-ocqiyue52-sameerkhan344s-projects.vercel.app"
     ], // production frontend
      credentials: true }));
